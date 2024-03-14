@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 
 const app = express()
-app.use('/static', express.static(__dirname + '/public'))
+app.use('/static', express.static(__dirname + '/static'))
 
 // Database Init
 main().catch((err) => console.log(err))
