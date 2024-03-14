@@ -1,9 +1,9 @@
+require('dotenv').config()
 // Dependencies
 const express = require('express')
 const mongoose = require('mongoose')
 const path = require('path')
 const hbs = require('express-hbs')
-require('dotenv').config()
 const port = process.env.PORT || 3000
 
 const app = express()
@@ -24,10 +24,10 @@ app.use('/static', express.static(__dirname + '/static'))
 // Middleware for Express
 
 // Database Initialization
-main().catch((err) => console.log(err))
-async function main() {
+db().catch((err) => console.log(err))
+async function db() {
 	await mongoose.connect(process.env.MONGOOSE_DATABASE_STRING)
-	console.log('Database running...')
+	console.log('Database running and connected...')
 }
 
 // Routes section
@@ -37,6 +37,5 @@ app.get('/', (req, res) => {
 
 // Listen on Port X
 app.listen(port, () => {
-	console.log(process)
 	console.log(`Server running on PORT:${port}`)
 })
