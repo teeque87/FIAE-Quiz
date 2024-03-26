@@ -31,8 +31,8 @@ async function db() {
 }
 
 // Routes section
-app.get('/', (req, res) => {
-	res.status(200).render('index')
+app.get('/', async (req, res) => {
+	res.status(200).render('landing')
 })
 
 // Listen on Port X

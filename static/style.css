@@ -3,3 +3,103 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+body {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 1.2rem;
+	color: white;
+	background: black;
+	/*background: linear-gradient(to bottom right, #00b4db, #1baddd);*/
+}
+.prevent-select {
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+}
+a:hover {
+	color: aqua;
+}
+main {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+li {
+	list-style: none;
+}
+.header {
+	display: flex;
+	flex-grow: 0;
+	justify-content: space-between;
+	z-index: 100;
+	padding: 2rem 10%;
+}
+.logo {
+	height: 3.5rem;
+}
+.discord {
+	height: 1.5rem;
+	margin-right: 0.5rem;
+}
+.discordbtn {
+	display: flex;
+	background: #7289da;
+	padding: 1.5rem;
+	color: white;
+	align-items: center;
+	border-radius: 4px;
+	outline: 1px solid #000000;
+	text-transform: uppercase;
+	font-size: 1.1rem;
+	height: 2rem;
+	box-shadow: 0 0 150px 20px #7289da;
+}
+.discordbtn:hover {
+	color: white;
+	background: rgba(87, 174, 255, 0.758);
+}
+.container {
+	flex-grow: 1;
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	align-self: center;
+}
+.content {
+	padding: 2rem 2rem;
+	display: flex;
+	flex-direction: column;
+
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(25px);
+	box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.25);
+	gap: 1rem;
+	border: 1px solid white;
+	border-radius: 1rem;
+}
+.demo {
+	color: black;
+	align-self: flex-end;
+	font-size: 1.5rem;
+	width: 8rem;
+	height: 4rem;
+	text-transform: uppercase;
+	background-color: greenyellow;
+	border: 1px solid black;
+}
+.demo:hover {
+	color: black;
+	background-color: lime;
+}
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 10%;
+	background: rgba(255, 255, 255, 0.2);
+}
